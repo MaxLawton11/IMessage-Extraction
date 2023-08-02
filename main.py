@@ -1,5 +1,6 @@
 import sqlite3
 import pandas as pd
+
 # substitute username with your username
 conn = sqlite3.connect('chat.db')
 # connect to the database
@@ -19,6 +20,3 @@ WHERE id='[number]' AND text LIKE '%hi%'
 messages = pd.read_sql_query(SQL, conn)
 
 print(messages)
-
-# sends to csv file on desktop
-messages.iloc[244:600].to_csv('test.csv', index=False, header=False)
