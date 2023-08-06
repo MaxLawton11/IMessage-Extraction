@@ -19,4 +19,4 @@ WHERE id='[number]' AND text LIKE '%hi%'
 # get messages using the sql
 messages = pd.read_sql_query(SQL, conn)
 
-print(messages)
+print(messages) # not the best way to print because you only see a few
