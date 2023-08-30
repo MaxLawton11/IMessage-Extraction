@@ -3,8 +3,10 @@ import pandas as pd
 
 # substitute username with your username
 conn = sqlite3.connect('chat.db')
+
 # connect to the database
 cur = conn.cursor()
+
 # get the names of the tables in the database
 cur.execute(" select name from sqlite_master where type = 'table' ") 
 
